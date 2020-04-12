@@ -1,7 +1,5 @@
-&nbsp;<button class="btn btn-primary" [disabled]="!value" (click)="onServerCreated()">Add Server</button>
-<p>{{serverCreatedStatus}}</p>
-<p>The server with id {{serverId}} is {{serverStatus}}</p>
-<input type="text" [(ngModel)]="serverName">
-<p>{{serverName}}</p>
-<label>User Name</label>
-&nbsp;&nbsp;<input class="glyphicon-fast-forward" type="text" (click)="cleartxt()"  [value]="txt">
+
+<input type="text" [(ngModel)]="serverName"><hr>
+&nbsp;<button class="btn btn-primary"  (click)="onServerCreated()">Add Server</button>
+<p *ngIf="serverCreated">Server created - {{serverName}}</p>
+

@@ -8,27 +8,18 @@ import set = Reflect.set;
 })
 export class ServerComponent implements OnInit {
 
-serverId = 100;
-serverStatus = 'online';
-value = false;
-serverCreatedStatus = 'No server found';
-  txt = 'Enter user name';
-  serverName = 'First Server';
+serverCreated = false;
+  serverName = '';
 
   constructor() {
-    setTimeout(() => { this.value = true; }, 3000);
   }
 
   ngOnInit() {
   }
 
   onServerCreated(){
-    this.serverCreatedStatus = 'Server created';
+    this.serverCreated = true;
   }
 
 
-
-  cleartxt() {
-    this.txt = '';
-  }
 }
