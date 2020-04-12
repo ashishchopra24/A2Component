@@ -11,7 +11,8 @@ export class ServerComponent implements OnInit {
 serverId = 100;
 serverStatus = 'online';
 value = false;
-
+serverCreatedStatus = 'No server found';
+  txt = 'Enter user name';
 
   constructor() {
     setTimeout(() => { this.value = true; }, 3000);
@@ -20,4 +21,13 @@ value = false;
   ngOnInit() {
   }
 
+  onServerCreated(){
+    this.serverCreatedStatus = 'Server created';
+  }
+
+
+
+  cleartxt() {
+    this.txt = '';
+  }
 }
