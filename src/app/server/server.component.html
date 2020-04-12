@@ -1,6 +1,5 @@
-
-<input type="text"> <hr>
-&nbsp;<button class="btn btn-primary"  >Add Server</button>
-<p [ngStyle]="{backgroundColor: getColor()}">Sever with Id {{serverId}} is {{serverStatus}}</p>
-
-
+<p
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>

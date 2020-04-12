@@ -1,5 +1,10 @@
-<h1>This is the App Component</h1>
-<hr>
+<label>Server Name</label>
 
-<app-server></app-server>
-
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<button
+  class="btn btn-primary"
+  (click)="onCreateServer()">Add Server</button>
+<app-server *ngFor="let server of servers"></app-server>
