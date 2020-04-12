@@ -1,5 +1,8 @@
 
 <input type="text" [(ngModel)]="serverName"><hr>
 &nbsp;<button class="btn btn-primary"  (click)="onServerCreated()">Add Server</button>
-<p *ngIf="serverCreated">Server created - {{serverName}}</p>
+<p *ngIf="serverCreated; else noServer">Server created - {{serverName}}</p>
+<ng-template #noServer>
+ <p>No server created</p>
+</ng-template>
 
