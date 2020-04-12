@@ -13,6 +13,7 @@ serverStatus = 'online';
 value = false;
 serverCreatedStatus = 'No server found';
   txt = 'Enter user name';
+  serverName = 'First Server';
 
   constructor() {
     setTimeout(() => { this.value = true; }, 3000);
