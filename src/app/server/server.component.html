@@ -1,8 +1,6 @@
 
-<input type="text" [(ngModel)]="serverName"><hr>
-&nbsp;<button class="btn btn-primary"  (click)="onServerCreated()">Add Server</button>
-<p *ngIf="serverCreated; else noServer">Server created - {{serverName}}</p>
-<ng-template #noServer>
- <p>No server created</p>
-</ng-template>
+<input type="text"> <hr>
+&nbsp;<button class="btn btn-primary"  >Add Server</button>
+<p [ngStyle]="{backgroundColor: getColor()}">Sever with Id {{serverId}} is {{serverStatus}}</p>
+
 

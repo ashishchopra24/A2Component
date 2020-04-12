@@ -8,17 +8,18 @@ import set = Reflect.set;
 })
 export class ServerComponent implements OnInit {
 
-serverCreated = false;
-  serverName = '';
+serverId = 10;
+serverStatus = 'Online';
 
   constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline';
   }
 
   ngOnInit() {
   }
 
-  onServerCreated(){
-    this.serverCreated = true;
+  getColor() {
+    return this.serverStatus === 'Online' ? 'green' : 'red' ;
   }
 
 
