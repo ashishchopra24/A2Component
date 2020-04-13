@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  value = '';
+  @ViewChild('textName', {static: true}) contentInput: ElementRef;
 
-  sendToServer(textName: HTMLInputElement) {
-    console.log('Info sent - ' + textName.value);
+
+  sendToServer() {
+    console.log('Info sent - ' + this.contentInput.nativeElement.value);
   }
 }
