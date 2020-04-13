@@ -1,2 +1,5 @@
-<h1>Number of server created {{serversCount}}</h1>
-<app-servers (count)="updateCount()"></app-servers>
+<hr><hr><hr>
+<label name="name">Name  </label>&nbsp;
+<input type="text" class="carousel" #textName><hr>
+<button (click)="sendToServer(textName)">Submit</button>
+

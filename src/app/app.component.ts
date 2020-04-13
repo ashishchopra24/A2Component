@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  serversCount = 2;
+  value = '';
 
-  updateCount() {
-    this.serversCount++;
+  sendToServer(textName: HTMLInputElement) {
+    console.log('Info sent - ' + textName.value);
   }
 }
