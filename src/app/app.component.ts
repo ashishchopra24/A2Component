@@ -6,17 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverName = 'Testserver';
-  servers = ['Testserver', 'Testserver 2'];
 
-  constructor() {
+  serversCount = 2;
+
+  updateCount() {
+    this.serversCount++;
   }
-
-
-
-  onCreateServer() {
-    this.servers.push(this.serverName);
-  }
-
-
 }
