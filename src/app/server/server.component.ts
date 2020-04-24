@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import set = Reflect.set;
+/*import set = Reflect.set;*/
 
 @Component({
   selector: 'app-server',
